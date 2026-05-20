@@ -244,52 +244,31 @@
     .trust-item { display:flex; align-items:center; gap:6px; font-size:11px; color:rgba(255,255,255,.4); }
     .trust-item svg { width:12px; height:12px; }
 
-    /* ── CHECKLIST ── */
-    .checklist-card { background:var(--card); border:1px solid var(--bdr); border-radius:12px; overflow:hidden; margin-bottom:40px; }
-    .checklist-toggle { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; cursor:pointer; background:transparent; border:none; width:100%; font-family:var(--font); gap:10px; }
-    .checklist-toggle-left { display:flex; align-items:center; gap:10px; }
-    .checklist-toggle-ico { width:32px; height:32px; background:var(--card-h); border-radius:8px; display:flex; align-items:center; justify-content:center; }
-    .checklist-toggle-ico svg { width:15px; height:15px; color:var(--t2); }
-    .checklist-toggle-title { font-size:15px; font-weight:700; color:var(--t); text-align:left; }
-    .checklist-toggle-sub { font-size:12px; color:var(--t3); text-align:left; }
-    .checklist-arrow { color:var(--t3); transition:transform .2s; }
-    .checklist-arrow svg { width:16px; height:16px; }
-    .checklist-arrow.open { transform:rotate(180deg); }
-    .checklist-body { display:none; border-top:1px solid var(--bdr); }
-    .checklist-body.open { display:block; }
-    .cl-section { padding:16px 20px; border-bottom:1px solid var(--bdr); }
-    .cl-section:last-child { border-bottom:none; }
-    .cl-section-title { display:flex; align-items:center; gap:8px; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--t3); margin-bottom:12px; }
-    .cl-section-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
-    .cl-item { display:flex; align-items:flex-start; gap:10px; padding:6px 0; }
-    .cl-check { width:18px; height:18px; border-radius:5px; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
-    .cl-check.done { background:var(--grng); }
-    .cl-check.done svg { width:11px; height:11px; stroke:var(--grn); }
-    .cl-check.pending { background:var(--card-h); }
-    .cl-check.pending svg { width:11px; height:11px; stroke:var(--t3); }
-    .cl-text { font-size:13px; color:var(--t); line-height:1.4; }
-    .cl-text.pending-text { color:var(--t3); }
 
     /* ── FOOTER ── */
-    .footer { background: var(--bg2); border-top: 1px solid var(--bdr); margin: 0 -16px; padding: 40px 16px 32px; }
+    .footer { background: var(--bg2); border-top: 1px solid var(--bdr); margin: 0 -16px; padding: 48px 16px 0; }
     .footer-inner { max-width: 920px; margin: 0 auto; }
-    .footer-top { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; margin-bottom: 32px; }
-    @media (max-width: 520px) { .footer-top { grid-template-columns: 1fr; } }
-    .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-    .footer-logo-wrap { width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
-    .footer-name { font-size: 15px; font-weight: 700; color: var(--t); }
-    .footer-tagline { font-size: 13px; color: var(--t2); line-height: 1.6; max-width: 320px; margin-bottom: 20px; }
-    .footer-contact { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-    .footer-contact-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--t2); transition: color .15s; min-height: 36px; }
-    .footer-contact-item:hover { color: var(--t); }
-    .footer-contact-item svg { width: 14px; height: 14px; flex-shrink: 0; color: var(--t3); }
-    .meta-badge { height: 22px; width: auto; opacity: .6; filter: brightness(1.1); }
-    .footer-links-title { font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--t3); margin-bottom: 16px; }
-    .footer-link { display: flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 500; color: var(--t2); transition: color .15s; min-height: 38px; }
-    .footer-link:hover { color: var(--t); }
-    .footer-link svg { width: 15px; height: 15px; flex-shrink: 0; }
-    .footer-divider { height: 1px; background: var(--bdr); margin-bottom: 16px; }
-    .footer-copy { font-size: 12px; color: var(--t3); }
+    .footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+    @media (max-width: 640px) { .footer-top { grid-template-columns: 1fr; gap: 32px; } }
+    .footer-brand-row { display: flex; align-items: center; gap: 20px; margin-bottom: 16px; }
+    .footer-logo-block { display: flex; flex-direction: column; align-items: center; gap: 6px; flex-shrink: 0; }
+    .footer-name { font-size: 13px; font-weight: 700; color: rgba(255,255,255,.9); white-space: nowrap; }
+    .footer-name span { color: var(--red); }
+    .footer-divider-v { width: 1px; height: 60px; background: rgba(255,255,255,.2); flex-shrink: 0; }
+    .footer-meta-badge { height: 56px; width: auto; object-fit: contain; opacity: .9; }
+    .footer-tagline { font-size: 13px; color: var(--t2); line-height: 1.6; max-width: 300px; }
+    .footer-col-title { font-size: 14px; font-weight: 700; color: var(--t); margin-bottom: 16px; }
+    .footer-col-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col-link { font-size: 13px; color: var(--t2); transition: color .15s; }
+    .footer-col-link:hover { color: var(--red); }
+    .footer-social-row { display: flex; gap: 16px; margin-bottom: 16px; }
+    .footer-social-ico { color: var(--t2); transition: color .15s; display: flex; align-items: center; }
+    .footer-social-ico:hover { color: var(--red); }
+    .footer-social-ico svg { width: 20px; height: 20px; }
+    .footer-contact-link { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--t2); transition: color .15s; margin-bottom: 8px; }
+    .footer-contact-link:hover { color: var(--red); }
+    .footer-contact-link svg { width: 15px; height: 15px; flex-shrink: 0; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.05); padding: 20px 0; text-align: center; font-size: 12px; color: var(--t3); }
 
     /* ── ANIMATIONS ── */
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.85)} }
@@ -562,66 +541,6 @@
     </div>
   </div>
 
-  <!-- ═══ PDF CHECKLIST ═══ -->
-  <div class="checklist-card a4">
-    <button class="checklist-toggle" onclick="toggleChecklist()">
-      <div class="checklist-toggle-left">
-        <div class="checklist-toggle-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-        </div>
-        <div>
-          <div class="checklist-toggle-title">Resource Hub Build Checklist</div>
-          <div class="checklist-toggle-sub">Based on ForgeMind PDF Build Checklist v1.0</div>
-        </div>
-      </div>
-      <div class="checklist-arrow" id="cl-arrow">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </button>
-    <div class="checklist-body" id="cl-body">
-      <div class="cl-section">
-        <div class="cl-section-title"><span class="cl-section-dot" style="background:#7c3aed;"></span>Section 01 — About ForgeMind AI</div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Brand logo + tagline</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Company introduction paragraph</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Core services list</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Social proof — 350+ students, 4.7★ rating</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Contact / social links</div></div>
-      </div>
-      <div class="cl-section">
-        <div class="cl-section-title"><span class="cl-section-dot" style="background:#22c55e;"></span>Section 02 — Free Resources</div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">n8n Beginner Playlist — with real thumbnail &amp; inline player</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">WhatsApp Automation Playlist — with real thumbnail &amp; inline player</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">22 GitHub repos with category filter tabs</div></div>
-        <div class="cl-item"><div class="cl-check pending"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/></svg></div><div class="cl-text pending-text">QR codes (optional — not added)</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">All URLs verified and working</div></div>
-      </div>
-      <div class="cl-section">
-        <div class="cl-section-title"><span class="cl-section-dot" style="background:#facc15;"></span>Section 03 — Full-Scale Business Automation Course</div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Course banner with real details from course page</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Lifetime Access badge</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">5 Live Q&amp;A sessions mentioned</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Course landing page URL linked</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Enroll button + WhatsApp enroll button</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Course link added with View Course &amp; Pricing button</div></div>
-        <div class="cl-item"><div class="cl-check pending"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/></svg></div><div class="cl-text pending-text">Coupon expiry date — not specified yet</div></div>
-      </div>
-      <div class="cl-section">
-        <div class="cl-section-title"><span class="cl-section-dot" style="background:var(--red);"></span>Section 04 — Design &amp; Production</div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">ForgeMind brand identity — dark theme matching course page</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">All links clickable, open in browser</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Mobile optimised for WhatsApp WebView</div></div>
-        <div class="cl-item"><div class="cl-check pending"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/></svg></div><div class="cl-text pending-text">Proofread all text — pending team review</div></div>
-      </div>
-      <div class="cl-section">
-        <div class="cl-section-title"><span class="cl-section-dot" style="background:var(--t3);"></span>Section 05 — Final Sign-Off</div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">All URLs tested and working</div></div>
-        <div class="cl-item"><div class="cl-check pending"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/></svg></div><div class="cl-text pending-text">Course pricing reviewed and confirmed live</div></div>
-        <div class="cl-item"><div class="cl-check done"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Course landing page is live</div></div>
-        <div class="cl-item"><div class="cl-check pending"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/></svg></div><div class="cl-text pending-text">Final review by founder / team lead</div></div>
-        <div class="cl-item"><div class="cl-check pending"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/></svg></div><div class="cl-text pending-text">WhatsApp broadcast message ready</div></div>
-      </div>
-    </div>
-  </div>
 
 </main>
 
@@ -629,58 +548,74 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
+
+      <!-- Col 1: Brand + Meta badge + tagline -->
       <div>
-        <div class="footer-brand">
-          <div class="footer-logo-wrap">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 270" width="32" height="32">
-              <path d="M132.5 17.2168C134.047 16.3237 135.953 16.3237 137.5 17.2168L235.753 73.9434C237.3 74.8365 238.253 76.4871 238.253 78.2734V191.727C238.253 193.513 237.3 195.163 235.753 196.057L137.5 252.783C135.953 253.676 134.047 253.676 132.5 252.783L34.2471 196.057C32.7001 195.163 31.7471 193.513 31.7471 191.727V78.2734C31.7471 76.4871 32.7001 74.8365 34.2471 73.9434Z" fill="rgba(255,255,255,.08)"/>
-              <path d="M132.5 24C133.8 23.27 136.2 23.27 137.5 24L229.5 76.5C230.8 77.23 231.5 78.62 231.5 80.08V189.92C231.5 191.38 230.8 192.77 229.5 193.5L137.5 246C136.2 246.73 133.8 246.73 132.5 246L40.5 193.5C39.2 192.77 38.5 191.38 38.5 189.92V80.08C38.5 78.62 39.2 77.23 40.5 76.5Z" fill="rgba(255,255,255,.85)"/>
-              <path d="M132.5 50C133.8 49.27 136.2 49.27 137.5 50L207 92C208.3 92.73 209 94.12 209 95.58V174.42C209 175.88 208.3 177.27 207 178L137.5 220C136.2 220.73 133.8 220.73 132.5 220L63 178C61.7 177.27 61 175.88 61 174.42V95.58C61 94.12 61.7 92.73 63 92Z" fill="#111"/>
-              <path d="M135.26 53.6155L101.777 73.606C100.496 74.3708 100.473 76.2184 101.735 77.0146L117.047 86.6768C117.693 87.0841 118.514 87.0886 119.163 86.6883L136.596 75.95C137.263 75.5394 138.107 75.5555 138.758 75.9912L159.388 89.8084C160.59 90.6133 160.567 92.3884 159.344 93.1609L133.581 109.437C132.953 109.834 132.157 109.85 131.513 109.478L86.897 83.729C86.2908 83.3792 85.5459 83.3717 84.9328 83.7092L65.0356 94.6617C64.3968 95.0133 64 95.6846 64 96.4138V174.378C64 175.085 64.3731 175.739 64.9814 176.099L134.336 217.145C134.966 217.518 135.75 217.517 136.378 217.142L205.274 176.1C205.879 175.739 206.25 175.087 206.25 174.382V113.114C206.25 111.568 204.57 110.606 203.236 111.39L186.715 121.105C186.104 121.464 185.729 122.12 185.729 122.829V161.881C185.729 162.57 185.374 163.21 184.791 163.576L136.396 193.895C135.759 194.294 134.952 194.303 134.307 193.916L83.6283 163.57C83.025 163.209 82.6557 162.558 82.6557 161.854V107.578C82.6557 106.024 84.3501 105.064 85.6832 105.862L134.356 135.007C134.975 135.378 135.746 135.386 136.373 135.029L203.287 96.9194C204.614 96.1634 204.638 94.2587 203.33 93.4693L137.319 53.6205C136.686 53.2386 135.895 53.2367 135.26 53.6155Z" fill="#D10D02"/>
-            </svg>
+        <div class="footer-brand-row">
+          <div class="footer-logo-block">
+            <div class="hdr-logo-wrap" style="width:42px;height:42px;border-radius:12px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 270" width="38" height="38">
+                <defs>
+                  <clipPath id="ftL"><path d="M125.1 160.759V141.079C125.1 140.378 124.733 139.729 124.133 139.367L102.033 126.03C100.7 125.226 99 126.186 99 127.743V147.804C99 148.514 99.3762 149.171 99.9886 149.53L122.089 162.485C123.422 163.266 125.1 162.305 125.1 160.759Z"/></clipPath>
+                  <clipPath id="ftR"><path d="M146.7 160.759V141.079C146.7 140.378 147.067 139.729 147.667 139.367L169.767 126.03C171.1 125.226 172.8 126.186 172.8 127.743V147.804C172.8 148.514 172.424 149.171 171.811 149.53L149.711 162.485C148.378 163.266 146.7 162.305 146.7 160.759Z"/></clipPath>
+                </defs>
+                <path d="M132.5 17.2168C134.047 16.3237 135.953 16.3237 137.5 17.2168L235.753 73.9434C237.3 74.8365 238.253 76.4871 238.253 78.2734V191.727C238.253 193.513 237.3 195.163 235.753 196.057L137.5 252.783C135.953 253.676 134.047 253.676 132.5 252.783L34.2471 196.057C32.7001 195.163 31.7471 193.513 31.7471 191.727V78.2734C31.7471 76.4871 32.7001 74.8365 34.2471 73.9434Z" fill="rgba(255,255,255,.08)"/>
+                <path d="M132.5 24C133.8 23.27 136.2 23.27 137.5 24L229.5 76.5C230.8 77.23 231.5 78.62 231.5 80.08V189.92C231.5 191.38 230.8 192.77 229.5 193.5L137.5 246C136.2 246.73 133.8 246.73 132.5 246L40.5 193.5C39.2 192.77 38.5 191.38 38.5 189.92V80.08C38.5 78.62 39.2 77.23 40.5 76.5Z" fill="rgba(255,255,255,.9)"/>
+                <path d="M132.5 50C133.8 49.27 136.2 49.27 137.5 50L207 92C208.3 92.73 209 94.12 209 95.58V174.42C209 175.88 208.3 177.27 207 178L137.5 220C136.2 220.73 133.8 220.73 132.5 220L63 178C61.7 177.27 61 175.88 61 174.42V95.58C61 94.12 61.7 92.73 63 92Z" fill="#111"/>
+                <path d="M135.26 53.6155L101.777 73.606C100.496 74.3708 100.473 76.2184 101.735 77.0146L117.047 86.6768C117.693 87.0841 118.514 87.0886 119.163 86.6883L136.596 75.95C137.263 75.5394 138.107 75.5555 138.758 75.9912L159.388 89.8084C160.59 90.6133 160.567 92.3884 159.344 93.1609L133.581 109.437C132.953 109.834 132.157 109.85 131.513 109.478L86.897 83.729C86.2908 83.3792 85.5459 83.3717 84.9328 83.7092L65.0356 94.6617C64.3968 95.0133 64 95.6846 64 96.4138V174.378C64 175.085 64.3731 175.739 64.9814 176.099L134.336 217.145C134.966 217.518 135.75 217.517 136.378 217.142L205.274 176.1C205.879 175.739 206.25 175.087 206.25 174.382V113.114C206.25 111.568 204.57 110.606 203.236 111.39L186.715 121.105C186.104 121.464 185.729 122.12 185.729 122.829V161.881C185.729 162.57 185.374 163.21 184.791 163.576L136.396 193.895C135.759 194.294 134.952 194.303 134.307 193.916L83.6283 163.57C83.025 163.209 82.6557 162.558 82.6557 161.854V107.578C82.6557 106.024 84.3501 105.064 85.6832 105.862L134.356 135.007C134.975 135.378 135.746 135.386 136.373 135.029L203.287 96.9194C204.614 96.1634 204.638 94.2587 203.33 93.4693L137.319 53.6205C136.686 53.2386 135.895 53.2367 135.26 53.6155Z" fill="#D10D02"/>
+                <path d="M134.442 139.793L92.1314 114.325C90.7984 113.522 89.1 114.482 89.1 116.038V157.72C89.1 158.421 89.4675 159.071 90.0685 159.433L134.392 186.113C135.041 186.504 135.854 186.495 136.493 186.09L178.619 159.439C179.199 159.072 179.55 158.434 179.55 157.749V121.732C179.55 121.03 179.919 120.379 180.521 120.017L203.329 106.333C203.931 105.971 204.3 105.32 204.3 104.618V104.258C204.3 102.719 202.636 101.757 201.303 102.524L136.47 139.813C135.841 140.175 135.064 140.168 134.442 139.793Z" fill="#111"/>
+                <path d="M125.1 160.759V141.079C125.1 140.378 124.733 139.729 124.133 139.367L102.033 126.03C100.7 125.226 99 126.186 99 127.743V147.804C99 148.514 99.3762 149.171 99.9886 149.53L122.089 162.485C123.422 163.266 125.1 162.305 125.1 160.759Z" fill="#111"/>
+                <path d="M146.7 160.759V141.079C146.7 140.378 147.067 139.729 147.667 139.367L169.767 126.03C171.1 125.226 172.8 126.186 172.8 127.743V147.804C172.8 148.514 172.424 149.171 171.811 149.53L149.711 162.485C148.378 163.266 146.7 162.305 146.7 160.759Z" fill="#111"/>
+                <g clip-path="url(#ftL)"><g class="fm-blink" style="transform-origin:112px 143.9px"><path d="M125.1 160.759V141.079C125.1 140.378 124.733 139.729 124.133 139.367L102.033 126.03C100.7 125.226 99 126.186 99 127.743V147.804C99 148.514 99.3762 149.171 99.9886 149.53L122.089 162.485C123.422 163.266 125.1 162.305 125.1 160.759Z" fill="#fff"/></g></g>
+                <g clip-path="url(#ftR)"><g class="fm-blink" style="transform-origin:159.75px 143.9px"><path d="M146.7 160.759V141.079C146.7 140.378 147.067 139.729 147.667 139.367L169.767 126.03C171.1 125.226 172.8 126.186 172.8 127.743V147.804C172.8 148.514 172.424 149.171 171.811 149.53L149.711 162.485C148.378 163.266 146.7 162.305 146.7 160.759Z" fill="#fff"/></g></g>
+              </svg>
+            </div>
+            <span class="footer-name">ForgeMind <span>AI</span></span>
           </div>
-          <span class="footer-name">ForgeMind AI</span>
+          <div class="footer-divider-v"></div>
+          <img src="meta-badge-footer.png" alt="Meta Business Partner" class="footer-meta-badge">
         </div>
-        <p class="footer-tagline">Intelligent WhatsApp Automation &amp; Business Agents. Meet customers where they are — automate smarter.</p>
-        <div class="footer-contact">
-          <a href="mailto:contact@forgemind.in" class="footer-contact-item" data-link="footer-email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            contact@forgemind.in
-          </a>
-          <a href="https://wa.me/919342245724" class="footer-contact-item" target="_blank" rel="noopener" data-link="footer-whatsapp-chat">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            +91 93422 45724
-          </a>
-        </div>
-        <!-- Meta Business Partner Badge -->
-        <img src="meta-badge.png" alt="Meta Business Partner" class="meta-badge">
+        <p class="footer-tagline">Meet customers where they are on WhatsApp. Intelligent automation for modern businesses.</p>
       </div>
+
+      <!-- Col 2: Company -->
       <div>
-        <div class="footer-links-title">Follow Us</div>
-        <a href="https://www.youtube.com/@forgemind_ai" class="footer-link" target="_blank" rel="noopener" data-link="footer-youtube">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          YouTube
+        <div class="footer-col-title">Company</div>
+        <div class="footer-col-links">
+          <a href="https://forgemind.in/contact" class="footer-col-link" target="_blank" rel="noopener" data-link="footer-contact">Contact</a>
+          <a href="#" class="footer-col-link" data-link="footer-privacy">Privacy Policy</a>
+        </div>
+      </div>
+
+      <!-- Col 3: Connect -->
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <div class="footer-social-row">
+          <a href="https://www.linkedin.com/company/forgemind-ai/posts/?feedView=all" class="footer-social-ico" target="_blank" rel="noopener" data-link="footer-linkedin" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.threads.com/@forgemind_ai" class="footer-social-ico" target="_blank" rel="noopener" data-link="footer-threads" aria-label="Threads">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.5 12.068c0-3.516.85-6.37 2.495-8.423C5.845 1.205 8.598.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-.548-1.959-1.51-3.479-2.86-4.52-1.406-1.078-3.3-1.63-5.434-1.646-3.015.02-5.287.968-6.756 2.817-1.403 1.763-2.115 4.227-2.115 7.315 0 3.09.712 5.553 2.115 7.315 1.47 1.85 3.742 2.797 6.756 2.818 1.978-.014 3.69-.492 5.091-1.42.967-.634 1.876-1.636 2.507-3.002H9.27v-2.015h12.065c.057.45.086.912.086 1.378 0 2.867-.819 5.155-2.435 6.799-1.603 1.63-3.855 2.464-6.695 2.529z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/forgemind_ai/" class="footer-social-ico" target="_blank" rel="noopener" data-link="footer-instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@forgemind_ai" class="footer-social-ico" target="_blank" rel="noopener" data-link="footer-youtube" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2.5 17a24.12 24.12 0 010-10 2 2 0 011.4-1.4 49.56 49.56 0 0116.2 0A2 2 0 0121.5 7a24.12 24.12 0 010 10 2 2 0 01-1.4 1.4 49.55 49.55 0 01-16.2 0A2 2 0 012.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+          </a>
+        </div>
+        <a href="mailto:contact@forgemind.in" class="footer-contact-link" data-link="footer-email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m22 7-8.991 5.727a2 2 0 01-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          contact@forgemind.in
         </a>
-        <a href="https://www.instagram.com/forgemind_ai/" class="footer-link" target="_blank" rel="noopener" data-link="footer-instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          Instagram
-        </a>
-        <a href="https://www.linkedin.com/company/forgemind-ai/" class="footer-link" target="_blank" rel="noopener" data-link="footer-linkedin">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn
-        </a>
-        <a href="https://www.threads.com/@forgemind_ai" class="footer-link" target="_blank" rel="noopener" data-link="footer-threads">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.5 12.068c0-3.516.85-6.37 2.495-8.423C5.845 1.205 8.598.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-.548-1.959-1.51-3.479-2.86-4.52-1.406-1.078-3.3-1.63-5.434-1.646-3.015.02-5.287.968-6.756 2.817-1.403 1.763-2.115 4.227-2.115 7.315 0 3.09.712 5.553 2.115 7.315 1.47 1.85 3.742 2.797 6.756 2.818 1.978-.014 3.69-.492 5.091-1.42.967-.634 1.876-1.636 2.507-3.002H9.27v-2.015h12.065c.057.45.086.912.086 1.378 0 2.867-.819 5.155-2.435 6.799-1.603 1.63-3.855 2.464-6.695 2.529z"/></svg>
-          Threads
-        </a>
-        <a href="https://forgemind.in" class="footer-link" target="_blank" rel="noopener" data-link="footer-website">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-          forgemind.in
+        <a href="tel:+919342245724" class="footer-contact-link" data-link="footer-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13.832 16.568a1 1 0 001.213-.303l.355-.465A2 2 0 0117 15h3a2 2 0 012 2v3a2 2 0 01-2 2A18 18 0 012 4a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-.8 1.6l-.468.351a1 1 0 00-.292 1.233 14 14 0 006.392 6.384"/></svg>
+          +91 9342245724
         </a>
       </div>
+
     </div>
-    <div class="footer-divider"></div>
-    <div class="footer-copy">© 2026 ForgeMind AI. All rights reserved. · Intelligent automation for modern businesses.</div>
+    <div class="footer-bottom">© 2026 ForgeMind AI. All rights reserved.</div>
   </div>
 </footer>
 
@@ -712,11 +647,6 @@
     document.querySelectorAll('.repo-card').forEach(function(card) {
       card.classList.toggle('hidden', cat !== 'all' && card.getAttribute('data-cat') !== cat);
     });
-  }
-
-  function toggleChecklist() {
-    document.getElementById('cl-body').classList.toggle('open');
-    document.getElementById('cl-arrow').classList.toggle('open');
   }
 
   var REPOS = [
