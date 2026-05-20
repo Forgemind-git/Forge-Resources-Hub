@@ -64,8 +64,9 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--bdr);
-      position: sticky; top: 0; z-index: 300;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       padding: 0 20px;
+      width: 100%;
     }
     .hdr-inner { max-width: 920px; margin: 0 auto; height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
     .hdr-left { display: flex; align-items: center; gap: 10px; }
@@ -89,7 +90,7 @@
     }
 
     /* ── WRAP ── */
-    .wrap { max-width: 920px; margin: 0 auto; padding: 0 16px 72px; width: 100%; }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 58px 16px 72px; width: 100%; }
 
     /* ── HERO ── */
     .hero {
